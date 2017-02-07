@@ -1,0 +1,302 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+// --- Variables --- //
+
+$base-padding: 20px;
+$base-margin: $base-padding;
+
+$font-size: 16px;
+$font-size-s: 14px;
+$font-size-lg: 18px;
+$font-size-xlg: 24px;
+$font-size-xxlg: 50px;
+$font-size-xxxlg: 70px;
+
+$font-bold:'RalewayBold', sans-serif;
+
+$colorRed: #E84545;
+$colorWhite: #FFF;
+$colorSilver: #C6CACC;
+$colorPurple: #3A3E64;
+$colorDarkPurple: #313454;
+
+// --- General --- //
+
+.button {
+	border: none;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: $colorRed;
+	outline: none;
+}
+
+.button_small {
+	padding: $base-padding/2 $base-padding*1.5;
+}
+
+.button_large {
+	padding: $base-padding/1.3 $base-padding*2.5;
+}
+
+.social__icon {
+	width: 30px;
+	height: 30px;
+	background-color: transparent;
+}
+
+.social__icon_silver {
+	border: 1px solid $colorSilver;
+	color: $colorSilver;
+}
+
+.social__icon_white {
+	border: 1px solid $colorWhite;
+	color: $colorWhite;
+}
+
+.noPadding {
+	padding: 0;
+}
+
+.section {
+	padding-top: $base-padding*4.5;
+}
+
+.titleFont {
+	font-family: $font-bold;
+	text-transform: uppercase;
+}
+
+body {
+	font-family: "RalewayRegular", sans-serif;
+	font-size: $font-size;
+	min-width: 320px;
+}
+
+// --- header --- //
+
+header {
+	height: 680px;
+	background-image: url('../img/banner.jpg');
+	background-size: cover;
+
+	.header__navigation {
+		height: 95px;
+		line-height: 95px;
+
+		.header__logo {
+			padding-top: $base-padding*1.75;
+		}
+
+		.header__menu {
+			list-style-type: none;
+			display: flex;
+			padding: 0;
+			margin: 0;
+
+			.header__list {
+				margin-right: $base-margin*1.75;
+
+				.header__link {
+					@extend .titleFont;
+					color: $colorWhite;
+					text-decoration: none;
+
+					&:hover {
+						color: $colorSilver;
+					}
+				}
+			}
+		}
+
+		.header__line {
+			height: 1px;
+			background-color: $colorSilver;
+		}
+	}
+
+	.header__banner {
+		padding-top: $base-padding*3.25;
+		text-align: center;
+		color: $colorWhite;
+
+		.header__title {
+			font-size: $font-size-xxlg;
+			font-family: $font-bold;
+		}
+
+		.header__text {
+			font-size: $font-size-lg;
+		}
+
+		.header__button {
+			padding-top: $base-padding*1.75;
+		}
+	}
+}
+
+// --- items --- //
+
+.items {
+	@extend .section;
+
+	.items__container {
+		text-align: center;
+		padding-bottom: $base-padding*2.5;
+
+		.params__icon {
+			color: $colorRed;
+			font-size: $font-size-xxxlg;
+		}
+
+		.items__title {
+			@extend .titleFont;
+			font-size: $font-size-lg;
+			padding: $base-padding/2 0;
+		}
+
+		.items__text {
+			font-size: $font-size-s;
+		}
+	}
+}
+
+// --- projects --- //
+
+.projects {
+	@extend .section;
+
+	.projects__container {
+		position: relative;
+		cursor: pointer;
+
+		&:hover .projects__wrapper{
+			opacity: 1;
+		}
+
+		.projects__wrapper {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: flex;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(232,69,69,.7);
+			opacity: 0;
+			transition: .1s;
+
+			.projects__desc {
+				margin: auto;
+				padding: $base-padding/2 $base-padding;
+				border: 1px solid $colorWhite;
+				text-align: center;
+				color: $colorWhite;
+
+				.projects__title {
+					@extend .titleFont;
+				}
+			}
+		}
+
+		.projects__img {
+			max-width: 100%;
+		}
+	}
+}
+
+// --- team --- //
+
+.team {
+	@extend .section;
+
+	.team__container {
+		text-align: center;
+
+		.team__img {
+			max-width: 100%;
+			border-radius: 50%;
+		}
+
+		.team__title {
+			padding: $base-padding/4 0;
+			font-family: $font-bold;
+		}
+
+		.team__position {
+			padding-bottom: $base-padding/4;
+			font-size: $font-size-s;
+			color: $colorRed;
+		}
+
+		.team__text {
+			font-size: $font-size-s;
+		}
+
+		.team__buttons {
+			padding-top: $base-padding/1.3;
+		}
+	}
+}
+
+// --- download --- //
+
+.download {
+	@extend .section;
+
+	.download__container {
+		text-align: center;
+
+		.download__title {
+			font-size: $font-size-xlg;
+		}
+
+		.download__text {
+			@extend .titleFont;
+			padding: $base-padding/2 0;
+		}
+	}
+}
+
+// --- footer --- //
+
+footer {
+	@extend .section;
+
+	.footer__top {
+		padding: $base-padding*4.25 0;
+		background-color: $colorPurple;
+
+		.footer__container {
+			padding: 0 $base-padding/1.3;
+			text-align: center;
+
+			.footer__title {
+				@extend .titleFont;
+				padding-bottom: $base-padding/2;
+				color: $colorWhite;
+			}
+
+			.footer__text {
+				font-size: $font-size-s;
+				color: $colorSilver;
+			}
+		}
+	}
+
+	.footer__bottom {
+		padding: $base-padding*1.5 0;
+		background-color: $colorDarkPurple;
+
+		.footer__container {
+			text-align: center;
+
+			.footer__text {
+				color: $colorSilver;
+			}
+		}
+	}
+}
