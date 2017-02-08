@@ -1,0 +1,250 @@
+@import './main.scss';
+
+@media only screen and (max-width: 1200px) {
+
+}
+
+@media only screen and (max-width: 991px) {
+   .team__container {
+      margin-bottom: $base-margin*3;
+   }
+}
+
+@media only screen and (max-width: 767px) {
+   header {
+      height: 600px;
+
+      .header__navigation {
+         height: 60px;
+         line-height: 60px;
+         position: fixed;
+         background-color: $colorDarkPurple;
+         z-index: 99;
+
+         .header__logo {
+            padding-top: $base-padding;
+         }
+
+         .button__menu {
+         	width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            position: relative;
+
+            .button__hamb {
+               position: absolute;
+               top: 14px;
+               right: 12px;
+            }
+         }
+
+         #header__navBar {
+            padding: 0;
+
+            .header__menu {
+               border-bottom: 1px solid $colorWhite;
+               display: flex;
+               flex-direction: column;
+               width: 100%;
+               text-align: center;
+               background-color: $colorRed;
+
+               .header__list {
+                  margin: 0;
+
+                  .header__link {
+                     display: block;
+                     color: $colorWhite;
+
+                     &:hover {
+                        background-color: $colorWhite;
+                        color: $colorRed;
+                     }
+                  }
+               }
+            }
+         }
+
+         .header__line {
+            display: none;
+         }
+      }
+
+      .header__banner {
+         margin: $base-margin*2 0;
+
+         .header__title {
+            font-size: $font-size-xlg*2;
+         }
+      }
+   }
+
+   .items {
+      .items__container {
+         padding: $base-padding/2 $base-padding*2.5;
+      }
+   }
+
+   .projects {
+      .projects__img {
+         width: 100%;
+      }
+   }
+
+   .team {
+      .team__container {
+         padding: 0 $base-padding*5;
+      }
+   }
+
+   footer {
+      .footer__top {
+         padding: 0;
+
+         .footer__container {
+            padding: $base-padding/2 $base-padding*2;
+
+            .footer__title {
+               padding: 0;
+            }
+         }
+      }
+
+      .footer__bottom {
+         padding: $base-padding 0;
+
+         .footer__container {
+            padding: 0 $base-padding/2;
+         }
+      }
+   }
+}
+
+@media only screen and (max-width: 480px) {
+   header {
+      height: 550px;
+
+      .header__menu {
+         .header__link {
+            height: 50px;
+            line-height: 50px;
+         }
+      }
+
+      .header__banner {
+         .header__title {
+            font-size: $font-size-s*2;
+         }
+
+         .header__text {
+            margin: 0;
+            font-size: $font-size-s;
+         }
+      }
+   }
+
+   .items {
+      padding: $base-padding*3 0;
+
+      .items__container {
+         padding: $base-padding/2 $base-padding/1.3;
+      }
+   }
+
+   .projects {
+      padding: 0;
+   }
+
+   .team {
+      padding: $base-padding*3 0 0 0;
+
+      .team__container {
+         padding: 0 $base-padding*1.5;
+
+         .team__title {
+            padding: 0;
+         }
+
+         .team__position {
+            padding: 0;
+         }
+      }
+   }
+
+   .download {
+      padding: 0;
+
+      .download__container {
+         .download__title {
+         	font-size: $font-size-lg;
+         }
+
+         .download__text {
+         	font-size: $font-size-s;
+         }
+      }
+   }
+
+   footer {
+      .footer__top {
+         .footer__container {
+            padding: $base-padding/4 0;
+
+         }
+      }
+
+      .footer__bottom {
+      	padding: $base-padding/2 0;
+         .footer__container {
+            padding: 0;
+            font-size: $font-size-s;
+         }
+      }
+   }
+}
+
+@media only screen and (max-width: 320px) {
+   header {
+      height: 500px;
+
+      .header__banner {
+         .header__title {
+            font-size: $font-size-xlg;
+         }
+
+         .header__text {
+            font-size: $font-size-s;
+         }
+      }
+   }
+
+   .items {
+      padding: $base-padding*2.5 0;
+
+      .items__container {
+         .items__icon  {
+            font-size: $font-size-xxlg;
+         }
+      }
+   }
+
+   .team {
+      .team__container {
+         .team__buttons {
+            padding: 0;
+         }
+      }
+   }
+
+   .download {
+      .download__container {
+         .download__title {
+            font-size: $font-size-lg;
+         }
+
+         .download__text {
+            font-size: $font-size-s;
+         }
+      }
+   }
+}
